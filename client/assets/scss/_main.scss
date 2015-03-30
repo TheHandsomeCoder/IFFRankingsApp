@@ -1,0 +1,20 @@
+.competition-sidebar {
+    padding: 0 !important;
+    background: #f9f9f9 !important;
+    border-right: 1px solid #e7e7e7;
+    transition-timing-function: cubic-bezier(0.76, -0.245, 0.24, 1.245) !important;
+    
+    .menu-bar {
+        background: #f9f9f9 !important;
+    }
+}
+
+.competition-search {
+    padding: 1rem;
+    border-bottom: 1px solid #e7e7e7;
+    overflow: visible;
+}
+
+.action-bar{
+	padding: 0;
+}
