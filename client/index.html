@@ -2,8 +2,8 @@
 <html lang="en" ng-app="application">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Ranking App</title>
     <link href="/assets/css/app.css" rel="stylesheet" type="text/css">
     <script src="/assets/js/foundation.js"></script>
@@ -13,55 +13,69 @@
 </head>
 
 <body>
-    <div class="grid-frame vertical">
-        <div class="grid-content shrink" style="padding: 0;">
-            <ul class="dark condense menu-bar">
-                <li><a><strong>Ranking App</strong></a></li>
-            </ul>
-        </div>
-        <div class="grid-block">
-            <div id="sidebar" class="medium-2 grid-block vertical competition-sidebar">
-                <div class="grid-content shrink competition-search">
-                    <input type="search" placeholder="Search..." />
-                </div>
-                <div class="grid-content collapse">
-                    <ul class="vertical menu-bar">
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
-                </div>
+<div class="grid-frame vertical">
+    <div class="grid-content shrink" style="padding: 0;">
+        <div class="menu-group dark">
+            <div class="menu-group-left">
+                <ul class="menu-bar dark">
+                    <li><a><strong>Ranking App</strong></a></li>
+                </ul>
             </div>
-            <div id="main" class="medium-10 grid-block vertical">
-                <div class="grid-block">
-                    <h1>Main content goes here</h1>
-                </div>
-                <div class="grid-block shrink">
-                    <div class="grid-content action-bar">
-                        <div class="menu-group dark">
-                            <div class="menu-group-left">
-                                <ul class="menu-bar dark">
-                                    <li><a href="#">Item One</a></li>
-                                    <li><a href="#">Item Too</a></li>
-                                    <li><a href="#">Item Three</a></li>
-                                </ul>
-                            </div>
-                            <div class="menu-group-right">
-                                <ul class="icon-left dark menu-bar">
-                                    <li>
-                                        <a href="#"><img zf-iconic="" icon="thumb" size="small" class="iconic-color-primary">Item Aye</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img zf-iconic="" icon="thumb" size="small" class="iconic-color-primary">Item Bee</a>
-                                    </li>
-                                </ul>
-                            </div>
+            <div class="menu-group-right">
+                <ul class="icon-left dark menu-bar">
+                    <li><a href="#"><img zf-iconic="" icon="cog" size="small" class="iconic-color-primary">Settings</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="grid-block">
+        <div id="sidebar" class="medium-2 grid-block vertical competition-sidebar">
+            <div class="grid-content shrink competition-search">
+                <input type="search" placeholder="Search..."/>
+            </div>
+            <div class="grid-content collapse">
+                <ul class="vertical menu-bar">
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Item</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main" class="medium-10 grid-block vertical">
+            <div class="grid-block">
+                <h1>Main content goes here</h1>
+            </div>
+            <div class="grid-block shrink">
+                <div class="grid-content action-bar">
+                    <div class="menu-group">
+                        <div class="menu-group-left">
+                            <ul class="menu-bar">
+                                <li><a href="#">Item One</a></li>
+                                <li><a href="#">Item Too</a></li>
+                                <li><a href="#">Item Three</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-group-right">
+                            <ul class="menu-bar">
+                                <li><select>
+                                    <option>First</option>
+                                    <option>Second</option>
+                                    <option>Third</option>
+                                </select></li>
+                                <li>
+                                    <button class="button">+ New Fencer</button>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 
 </html>
