@@ -18,62 +18,21 @@
         <div class="menu-group dark">
             <div class="menu-group-left">
                 <ul class="menu-bar dark">
-                    <li><a><strong>Ranking App</strong></a></li>
+                    <li><a  ui-sref-active="current" ui-sref="home"><strong>Ranking App</strong></a></li>
+                    <li ><a  ui-sref-active="current" ui-sref="competition">Competitions</a></li>
                 </ul>
             </div>
             <div class="menu-group-right">
                 <ul class="icon-left dark menu-bar">
-                    <li><a href="#"><img zf-iconic="" icon="cog" size="small" class="iconic-color-primary">Settings</a>
+                    <li><a><img zf-iconic="" icon="cog" size="small" class="iconic-color-primary">Settings</a>
                     </li>
 
                 </ul>
             </div>
         </div>
-
     </div>
-    <div class="grid-block">
-        <div id="sidebar" class="medium-2 grid-block vertical competition-sidebar">
-            <div class="grid-content shrink competition-search">
-                <input type="search" placeholder="Search..."/>
-            </div>
-            <div class="grid-content collapse">
-                <ul class="vertical menu-bar">
-                    <li><a href="#">Item</a></li>
-                    <li><a href="#">Item</a></li>
-                    <li><a href="#">Item</a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="main" class="medium-10 grid-block vertical">
-            <div class="grid-block">
-                <h1>Main content goes here</h1>
-            </div>
-            <div class="grid-block shrink">
-                <div class="grid-content action-bar">
-                    <div class="menu-group">
-                        <div class="menu-group-left">
-                            <ul class="menu-bar">
-                                <li><a href="#">Item One</a></li>
-                                <li><a href="#">Item Too</a></li>
-                                <li><a href="#">Item Three</a></li>
-                            </ul>
-                        </div>
-                        <div class="menu-group-right">
-                            <ul class="menu-bar">
-                                <li><select>
-                                    <option>First</option>
-                                    <option>Second</option>
-                                    <option>Third</option>
-                                </select></li>
-                                <li>
-                                    <button class="button">+ New Fencer</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div ui-view class="grid-block">
+
     </div>
 </div>
 </body>

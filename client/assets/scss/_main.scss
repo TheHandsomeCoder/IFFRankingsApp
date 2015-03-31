@@ -26,21 +26,19 @@
     .menu-bar{
       background: #f9f9f9 !important;
 
-      .button{
-        margin-bottom: 0;
-      }
-
-      #{$all-text-inputs},select {
-        margin-bottom: 0;
+      li{
         margin-right: 1rem;
-        padding: 0;
+
+        .button{
+          margin: 0;
+        }
+
+        #{$all-text-inputs},select {
+          margin-bottom: 0;
+          padding: 0;
+        }
       }
-
-
     }
-
-
-
 }
 
 
