@@ -6,10 +6,25 @@ controller: CompetitionController
 
 <div id="sidebar" class="medium-2 grid-block vertical competition-sidebar">
     <div class="grid-content shrink competition-search">
-        <input type="search" placeholder="Search..."/>
+        <input type="search" placeholder="Search..." />
     </div>
     <div class="grid-content collapse">
         <ul class="vertical menu-bar">
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
             <li><a href="#">Item</a></li>
             <li><a href="#">Item</a></li>
             <li><a href="#">Item</a></li>
@@ -18,7 +33,14 @@ controller: CompetitionController
 </div>
 <div id="main" class="medium-10 grid-block vertical">
     <div class="grid-block">
-        <h1>{{title}}</h1>
+        <div class="grid-content ng-scope">
+            <section class="results block-list with-icons">
+                <h3>Competition Name</h3>
+                <ul>
+                    <li></li>
+                </ul>
+            </section>
+        </div>
     </div>
     <div class="grid-block shrink">
         <div class="grid-content action-bar">
@@ -32,17 +54,59 @@ controller: CompetitionController
                 </div>
                 <div class="menu-group-right">
                     <ul class="menu-bar">
-                        <li><select>
-                            <option>First</option>
-                            <option>Second</option>
-                            <option>Third</option>
-                        </select></li>
                         <li>
-                            <button class="button">+ New Fencer</button>
+                            <select>
+                                <option>First</option>
+                                <option>Second</option>
+                                <option>Third</option>
+                            </select>
+                        </li>
+                        <li>
+                            <button zf-toggle="new-fencer" class="button">+ New Fencer</button>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <div zf-panel="" class="" position="right" id="new-fencer">
+        <a zf-close="" class="close-button">×</a>
+        <h3 class="title">New Fencer</h3>
+        <div class="grid-block vertical">
+            <div class="grid-block">
+                <div class="grid-content">
+
+                    <form novalidate>
+                        <label>
+                            First Name
+                            <input required type="text" placeholder="First Name">
+                        </label>
+                        <label>
+                            Last Name
+                            <input required type="text" placeholder="Last Name">
+                        </label>
+                        <label>
+                            Club
+                            <input required type="text" placeholder="Club">
+                        </label>
+                        <label>Gender</label>
+                        <input required type="radio" name="pokemon" value="Red" id="pokemonRed">
+                        <label for="pokemonRed">Male</label>
+                        <input required type="radio" name="pokemon" value="Blue" id="pokemonBlue">
+                        <label for="pokemonBlue">Female</label>
+                        <br/>
+                        <button class="expand button primary" href="#" zf-open="my-notify">Submit</button>
+                    </form>
+                </div>               
+            </div>
+            <div class="grid-block shrink">
+                <div class="grid-content">
+                    <button zf-close="" class="expand button alert">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
