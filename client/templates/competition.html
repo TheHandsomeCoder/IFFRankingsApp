@@ -34,10 +34,15 @@ controller: CompetitionController
 <div id="main" class="medium-10 grid-block vertical">
     <div class="grid-block">
         <div class="grid-content ng-scope">
-            <section class="results block-list with-icons">
-                <h3>Competition Name</h3>
+            <section class="results block-list">
+                <h3>East of Ireland Open 2015</h3>
                 <ul>
-                    <li></li>
+                    <li>
+                        <span>                           
+                            <span class="left stars block-list-label">* * * * *</span>
+                            <span class="block-list-label">The Oriental, Bangkok</span>
+                        </span>
+                    </li>
                 </ul>
             </section>
         </div>
@@ -90,10 +95,10 @@ controller: CompetitionController
                             <input required type="text" placeholder="Club">
                         </label>
                         <label>Gender</label>
-                        <input required type="radio" name="pokemon" value="Red" id="pokemonRed">
-                        <label for="pokemonRed">Male</label>
-                        <input required type="radio" name="pokemon" value="Blue" id="pokemonBlue">
-                        <label for="pokemonBlue">Female</label>
+                        <input required type="radio" name="gender" value="Red" id="male">
+                        <label for="male">Male</label>
+                        <input required type="radio" name="gender" value="Blue" id="female">
+                        <label for="female">Female</label>
                         <br/>
                         <button class="expand button primary" href="#" zf-open="my-notify">Submit</button>
                     </form>
