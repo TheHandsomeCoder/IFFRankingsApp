@@ -38,13 +38,14 @@ var paths = {
     'bower_components/angular-ui-router/release/angular-ui-router.js',
     'bower_components/foundation-apps/js/vendor/**/*.js',
     'bower_components/foundation-apps/js/angular/**/*.js',
+    'bower_components/lodash/lodash.min.js',
     '!bower_components/foundation-apps/js/angular/app.js'
   ],
   // These files are for your app's JavaScript
   appJS: [
     'client/assets/js/app.js',
-    'client/assets/js/controllers/*.js'
-
+    'client/assets/js/controllers/*.js',
+    'client/assets/js/services/*.js'
   ]
 }
 
@@ -94,10 +95,10 @@ gulp.task('uglify', function(cb) {
 
   // App JavaScript
   gulp.src(paths.appJS)
-    .pipe($.uglify()
-      .on('error', function(e) {
-        console.log(e);
-      }))
+    // .pipe($.uglify()
+    //   .on('error', function(e) {
+    //     console.log(e);
+    //   }))
     .pipe($.concat('app.js'))
     .pipe(gulp.dest('./build/assets/js/'))
   ;
