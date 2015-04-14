@@ -10,7 +10,7 @@ controller: CompetitionController
     </div>
     <div class="grid-content collapse">
         <ul class="vertical menu-bar">
-            <li ng-repeat="competition in competitions"><a ui-sref="competition({ id: competition.id })">{{competition.name}}</a></li>           
+            <li ng-repeat="competition in competitions"><a ui-sref-active="current" ui-sref="competition({ id: competition.id })">{{competition.name}}</a></li>
         </ul>
     </div>
 </div>

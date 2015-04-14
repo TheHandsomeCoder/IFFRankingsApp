@@ -1,6 +1,7 @@
 ---
 name: fencer
 url: /fencer
+controller: FencerController
 ---
 
 
@@ -12,11 +13,13 @@ url: /fencer
 <div id="main" class="medium-10 grid-block vertical">
     <div class="grid-block">
         <div class="grid-content ng-scope">
-            <section class="results block-list with-icons">
-                <h3>Fencers Name</h3>
-                <ul>
-                    <li></li>
-                </ul>
+            <section class="results block-list">
+
+                    <header>Fencers</header>
+                    <ul>
+                        <li ng-repeat="fencer in fencers"><input type="number" placeholder="1"></li>
+                    </ul>
+
             </section>
         </div>
     </div>

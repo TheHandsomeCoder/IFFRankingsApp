@@ -1,51 +1,72 @@
 .competition-sidebar {
-    padding: 0 !important;
+  padding: 0 !important;
+  background: #f9f9f9 !important;
+  border-right: 1px solid #e7e7e7;
+  .menu-bar {
     background: #f9f9f9 !important;
-    border-right: 1px solid #e7e7e7;
-    .menu-bar {
-        background: #f9f9f9 !important;
+
+    li {
+      a.current {
+        background: #ededed;
+        color: #000;
+      }
     }
+
+  }
 }
 
 .competition-search {
-    padding: 1rem;
-    border-bottom: 1px solid #e7e7e7;
-    overflow: visible;
-    input {
-        margin: 0;
-    }
+  padding: 1rem;
+  border-bottom: 1px solid #e7e7e7;
+  overflow: visible;
+  input {
+    margin: 0;
+  }
 }
 
 .action-bar {
-    padding: 0;
+  padding: 0;
+  background: #f9f9f9 !important;
+  border-top: 1px solid #e7e7e7;
+  .menu-bar {
     background: #f9f9f9 !important;
-    border-top: 1px solid #e7e7e7;
-    .menu-bar {
-        background: #f9f9f9 !important;
-        li {
-            margin-right: 1rem;
-            .button {
-                margin: 0;
-            }
-            #{$all-text-inputs}, select {
-                margin-bottom: 0;
-                padding-top: 1px;
-                padding-bottom: 1px;
-            }
-        }
+    li {
+      margin-right: 1rem;
+      .button {
+        margin: 0;
+      }
+      #{$all-text-inputs}, select {
+        margin-bottom: 0;
+        padding-top: 1px;
+        padding-bottom: 1px;
+      }
     }
+  }
+}
+
+.menu-bar {
+  li {
+    a.current {
+      background: #323232;
+      color: #fff;
+    }
+  }
 }
 
 .results {
-    padding: 0 1rem;
+  padding: 0 1rem;
+
+  &.block-list li{
+    font-size: larger;
+  }
 }
 
 .panel-right {
-    .title {
-        padding: 5px 1rem;
-    }
+  .title {
+    padding: 5px 1rem;
+  }
 
-    button.primary{
-      margin-top: 1rem;
-    }
+  button.primary {
+    margin-top: 1rem;
+  }
 }
