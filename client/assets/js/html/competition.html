@@ -10,15 +10,40 @@ controller: CompetitionController
     </div>
     <div class="grid-content collapse">
         <ul class="vertical menu-bar">
-            <li><a href="#">Item</a></li>
-            <li><a href="#">Item</a></li>
-            <li><a href="#">Item</a></li>
+            <li ng-repeat="competition in competitions"><a href="#">{{competition.name}}}</a></li>            
         </ul>
     </div>
 </div>
 <div id="main" class="medium-10 grid-block vertical">
     <div class="grid-block">
         <h1>{{title}}</h1>
+
+        <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Super Hero</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Peter</td>
+            <td>Parker</td>
+            <td>Spiderman</td>
+        </tr>
+        <tr>
+            <td>Bruce</td>
+            <td>Wayne</td>
+            <td>Batman</td>
+        </tr>
+        <tr>
+            <td>Clark</td>
+            <td>Kent</td>
+            <td>Superman</td>
+        </tr>
+    </tbody>
+</table>
     </div>
     <div class="grid-block shrink">
         <div class="grid-content action-bar">

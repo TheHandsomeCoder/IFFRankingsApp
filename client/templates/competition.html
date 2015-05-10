@@ -20,14 +20,32 @@ controller: CompetitionController
         <div class="grid-content ng-scope">
             <section class="results block-list">
                 <h3>{{competition.name}}</h3>
-                <ul>
-                    <li>
-                        <span>                           
-                            <span class="left stars block-list-label">* * * * *</span>
-                            <span class="block-list-label">The Oriental, Bangkok</span>
-                        </span>
-                    </li>
-                </ul>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Super Hero</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Peter</td>
+                            <td>Parker</td>
+                            <td>Spiderman</td>
+                        </tr>
+                        <tr>
+                            <td>Bruce</td>
+                            <td>Wayne</td>
+                            <td>Batman</td>
+                        </tr>
+                        <tr>
+                            <td>Clark</td>
+                            <td>Kent</td>
+                            <td>Superman</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
         </div>
     </div>
@@ -64,7 +82,6 @@ controller: CompetitionController
         <div class="grid-block vertical">
             <div class="grid-block">
                 <div class="grid-content">
-
                     <form novalidate>
                         <label>
                             First Name
@@ -86,7 +103,7 @@ controller: CompetitionController
                         <br/>
                         <button class="expand button primary" href="#" zf-open="my-notify">Submit</button>
                     </form>
-                </div>               
+                </div>
             </div>
             <div class="grid-block shrink">
                 <div class="grid-content">
@@ -96,6 +113,7 @@ controller: CompetitionController
         </div>
     </div>
 </div>
+
 
 
 

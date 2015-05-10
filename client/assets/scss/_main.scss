@@ -70,3 +70,11 @@
     margin-top: 1rem;
   }
 }
+
+table {
+    @extend %table;
+    @extend %table-bordered;
+}
+
+
+
