@@ -23,7 +23,7 @@ var paths = {
   // Sass will check these folders for files when you use @import.
   sass: [
     'client/assets/scss',
-    'bower_components/tables-sass/scss',      
+    'bower_components/foundation/scss/foundation/components',      
     'bower_components/foundation-apps/scss',      
      require('node-bourbon').includePaths
 

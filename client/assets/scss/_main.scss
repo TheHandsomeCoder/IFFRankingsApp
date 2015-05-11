@@ -54,11 +54,17 @@
 }
 
 .results {
-  padding: 0 1rem;
+  padding: 0;
+  background: #fff;
 
-  &.block-list li{
-    font-size: larger;
+  h2{
+    padding-bottom: 8px;
   }
+
+  table{
+    width:100%;
+  }
+  
 }
 
 .panel-right {
@@ -74,7 +80,26 @@
 table {
     @extend %table;
     @extend %table-bordered;
+
+    .inline-label{
+      margin-bottom: 0;
+    }
+
+    input{
+      margin-bottom: 0 !important;
+    }
+
+     .button{
+      margin:0;
+    }
 }
+
+
+#main{
+  background: #eee;
+}
+
+
 
 
 
