@@ -25,6 +25,7 @@ controller: CompetitionController
                         <tr>
                             <th style="width:10%;">Rank</th>
                             <th>Fencer</th>
+                            <th>Club</th>
                             <th style="width:15%; text-align: center">Edit</th>
                             <th style="width:15%; text-align: center">Delete</th>
                         </tr>
@@ -32,17 +33,19 @@ controller: CompetitionController
                     <tbody>
                         <tr ng-repeat="result in results">
                             <td style="width:10%; ">{{result.rank}}</td>
-                            <td>{{result.fencer}}</td>
+                            <td>{{result.fencer.name}}</td>
+                            <td>{{result.fencer.club}}</td>
                             <td style="width:15%; text-align: center"><button class="button primary">Edit</button></td>
                             <td style="width:15%; text-align: center"><button class="button alert">Delete</button></td>
                         </tr>                        
                           <tr>
                             <td style="width:10%;"><input type="number" ng-model="result.rank" ng-init="result.rank = 4"/></td>
-                            <td >
+                            <td>
                             <span class="inline-label">
                                 <input type="text" ng-model="result.fencer" placeholder="Name, Club, IFF Number">
                                 <a class="button" ng-click="addNewResult()">Save</a>
                                 </span></td>                           
+                            <td></td>
                             <td style="width:15%; text-align: center"></td>
                             <td style="width:15%; text-align: center"></td>
                         </tr>
