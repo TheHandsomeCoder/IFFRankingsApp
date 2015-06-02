@@ -1,0 +1,113 @@
+
+<div id="sidebar" class="medium-2 grid-block vertical competition-sidebar">
+    <div class="grid-content shrink competition-search">
+        <input type="search" placeholder="Search..." />
+    </div>
+    <div class="grid-content collapse">
+        <ul class="vertical menu-bar">
+            <li ng-repeat="competition in competitions"><a ui-sref-active="current" ui-sref="competition({ id: competition.id })">{{competition.name}}</a></li>
+        </ul>
+    </div>
+</div>
+
+<div ng-if="competition" id="main" class="medium-10 grid-block vertical">
+    <div class="grid-block">
+        <div class="grid-content ng-scope results large-9">
+            <section >
+            <h2>{{competition.name}}</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th style="width:10%;">Rank</th>
+                            <th>Fencer</th>
+                            <th style="width:15%; text-align: center">Club</th>
+                            <th style="width:15%; text-align: center">Edit</th>
+                            <th style="width:15%; text-align: center">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="result in results">
+                            <td style="width:10%; ">{{result.rank}}</td>
+                            <td>{{result.fencer.name}}</td>
+                            <td style="width:15%; text-align: center">{{result.fencer.club}}</td>
+                            <td style="width:15%; text-align: center"><button class="button primary">Edit</button></td>
+                            <td style="width:15%; text-align: center"><button class="button alert">Delete</button></td>
+                        </tr>   
+                    </tbody>
+                </table>
+            </section> 
+        </div>
+    </div>
+    <div class="grid-block shrink large-9">
+        <div class="grid-content action-bar">
+            <div class="menu-group">
+                <div class="menu-group-left medium-8 large-9">
+                    <table class="form-table">
+            <tr>
+                <td style="width:20%;"><input type="number" ng-model="result.rank" ng-init="result.rank = 4"/></td>
+                <td>
+                <span class="inline-label">
+                <input type="text" ng-model="result.fencer" placeholder="Name, Club, IFF Number">
+                <a class="button" ng-click="addNewResult()">Save</a>
+                </span></td>                  
+                </tr>
+        </table>   
+                </div>
+                <div class="menu-group-right">
+                    <ul class="menu-bar">
+                        <li>
+                            <select>
+                                <option>First</option>
+                                <option>Second</option>
+                                <option>Third</option>
+                            </select>
+                        </li>
+                        <li>
+                            <button zf-toggle="new-fencer" class="button">+ New Fencer</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div zf-panel="" class="" position="right" id="new-fencer">
+        <a zf-close="" class="close-button">×</a>
+        <h3 class="title">New Fencer</h3>
+        <div class="grid-block vertical">
+            <div class="grid-block">
+                <div class="grid-content">
+                    <form novalidate>
+                        <label>
+                            First Name
+                            <input required type="text" placeholder="First Name">
+                        </label>
+                        <label>
+                            Last Name
+                            <input required type="text" placeholder="Last Name">
+                        </label>
+                        <label>
+                            Club
+                            <input required type="text" placeholder="Club">
+                        </label>
+                        <label>Gender</label>
+                        <input required type="radio" name="gender" value="Red" id="male">
+                        <label for="male">Male</label>
+                        <input required type="radio" name="gender" value="Blue" id="female">
+                        <label for="female">Female</label>
+                        <br/>
+                        <button class="expand button primary" href="#" zf-open="my-notify">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="grid-block shrink">
+                <div class="grid-content">
+                    <button zf-close="" class="expand button alert">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
