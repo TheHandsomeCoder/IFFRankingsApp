@@ -22,6 +22,7 @@
   },
   "private": true,
   "dependencies": {
+    "gulp-rename": "^1.2.2",
     "node-bourbon": "^4.2.1-beta1"
   }
 }

@@ -6,6 +6,8 @@
 // - - - - - - - - - - - - - - -
 
 var gulp     = require('gulp'),
+    ext_replace = require('gulp-ext-replace'),
+    rename = require("gulp-rename"),
     $        = require('gulp-load-plugins')(),
     rimraf   = require('rimraf'),
     sequence = require('run-sequence'),
@@ -23,11 +25,15 @@ var paths = {
   // Sass will check these folders for files when you use @import.
   sass: [
     'client/assets/scss',
-    'bower_components/foundation/scss/foundation/components',      
+    'tmp',
+    'bower_components/foundation/scss/foundation/components',
     'bower_components/foundation-apps/scss',
-    'bower_components/allmighty-autocomplete/css',
      require('node-bourbon').includePaths
 
+  ],
+
+  css:[
+      'bower_components/allmighty-autocomplete/style/autocomplete.css'
   ],
   // These files include Foundation for Apps and its dependencies
   foundationJS: [
@@ -66,6 +72,16 @@ gulp.task('copy', function() {
   })
     .pipe(gulp.dest('./build'))
   ;
+});
+
+
+gulp.task('css-to-sass', function() {
+  return gulp.src(paths.css)
+    .pipe(rename({
+          prefix:"_",
+          extname:".scss"
+      }))
+    .pipe(gulp.dest('./tmp'));
 });
 
 // Compiles Sass
@@ -155,7 +171,7 @@ gulp.task('server', function() {
 
 // Builds your entire app once, without starting a server
 gulp.task('build', function(cb) {
-  sequence('clean', ['copy', 'copy:foundation', 'sass', 'uglify'], 'copy:templates', function() {
+  sequence('clean','css-to-sass', ['copy', 'copy:foundation', 'sass', 'uglify'], 'copy:templates', function() {
     console.log("Successfully built.");
     cb();
   });
