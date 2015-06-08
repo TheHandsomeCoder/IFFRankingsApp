@@ -8,7 +8,10 @@
     //foundation
     'foundation',
     'foundation.dynamicRouting',
-    'foundation.dynamicRouting.animations'
+    'foundation.dynamicRouting.animations',
+
+    //3rd party
+    'autocomplete'
   ])
     .config(config)
     .run(run)

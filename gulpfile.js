@@ -47,6 +47,7 @@ var paths = {
     'bower_components/foundation-apps/js/vendor/**/*.js',
     'bower_components/foundation-apps/js/angular/**/*.js',
     'bower_components/lodash/lodash.min.js',
+    'bower_components/allmighty-autocomplete/script/autocomplete.js',
     '!bower_components/foundation-apps/js/angular/app.js'
   ],
   // These files are for your app's JavaScript
@@ -160,7 +161,7 @@ gulp.task('copy:foundation', function(cb) {
 gulp.task('server', function() {
   gulp.src('./build')
     .pipe($.webserver({
-      port: 8080,
+      port: 3000,
       host: 'localhost',
       fallback: 'index.html',
       livereload: true,

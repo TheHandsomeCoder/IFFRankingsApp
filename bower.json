@@ -23,9 +23,9 @@
     "tests"
   ],
   "dependencies": {
-    "foundation-apps": "~1.1.0",
     "lodash": "~3.8.0",
     "tables-sass": "https://github.com/jwebcat/tables-sass.git#~1.1.1",
-    "allmighty-autocomplete": "https://github.com/JustGoscha/allmighty-autocomplete.git"
+    "allmighty-autocomplete": "https://github.com/JustGoscha/allmighty-autocomplete.git",
+    "foundation-apps": "~1.1.0"
   }
 }

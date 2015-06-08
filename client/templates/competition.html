@@ -51,10 +51,14 @@ controller: CompetitionController
             <tr>
                 <td style="width:20%;"><input type="number" ng-model="result.rank" ng-init="result.rank = 4"/></td>
                 <td>
-                <span class="inline-label">
-                <input type="text" ng-model="result.fencer" placeholder="Name, Club, IFF Number">
-                <a class="button" ng-click="addNewResult()">Save</a>
-                </span></td>                  
+                    <!--<span class="inline-label">-->
+                    <!--<input type="text" ng-model="result.fencer" placeholder="Name, Club, IFF Number">-->
+                    <!--<a class="button" ng-click="addNewResult()">Save</a>-->
+                    <!--</span>-->
+
+                    <autocomplete ng-model="result.fencer" data="fencers"></autocomplete>
+
+                </td>
                 </tr>
         </table>   
                 </div>
