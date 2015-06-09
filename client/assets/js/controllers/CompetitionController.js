@@ -11,7 +11,7 @@ function CompetitionController($scope, $stateParams, $state, $controller, Compet
 
     var competitionID = $stateParams.id;
     $scope.competition = CompetitionService.getCompetition(competitionID);
-    $scope.results = [];
+    $scope.results = [{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55},{rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55}];
 
     $scope.addNewResult = function(){
     	$scope.results.push({rank:1, fencer:{name:"Scott O'Malley",club:"Phoenix"}, points: 55});
