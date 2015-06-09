@@ -6,8 +6,8 @@
 // - - - - - - - - - - - - - - -
 
 var gulp     = require('gulp'),
-    ext_replace = require('gulp-ext-replace'),
     rename = require("gulp-rename"),
+    ghPages = require('gulp-gh-pages'),
     $        = require('gulp-load-plugins')(),
     rimraf   = require('rimraf'),
     sequence = require('run-sequence'),
@@ -177,6 +177,17 @@ gulp.task('build', function(cb) {
     cb();
   });
 });
+
+
+gulp.task('deploy', function(){
+    return gulp.src('./build/**/*')
+        .pipe(ghPages());
+});
+
+gulp.task('update-gh-pages', function(){
+    sequence('build', 'deploy');
+});
+
 
 // Default task: builds your app, starts a server, and recompiles assets when they change
 gulp.task('default', function () {
