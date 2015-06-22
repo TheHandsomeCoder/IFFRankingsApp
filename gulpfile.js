@@ -56,7 +56,7 @@ var paths = {
     'client/assets/js/controllers/*.js',
     'client/assets/js/services/*.js'
   ]
-}
+};
 
 // 3. TASKS
 // - - - - - - - - - - - - - - -
@@ -155,7 +155,7 @@ gulp.task('copy:foundation', function(cb) {
   ;
 
   cb();
-})
+});
 
 // Starts a test server, which you can view at http://localhost:8080
 gulp.task('server', function() {
