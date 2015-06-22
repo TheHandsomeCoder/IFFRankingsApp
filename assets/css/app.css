@@ -6246,7 +6246,16 @@ table .button, table button {
 
 .autocomplete ul {
   bottom: 18px;
-  left: -18px !important; }
+  left: -18px !important;
+  border-bottom: none !important;
+  border-top: 1px solid #888; }
+
+.has-autocomplete {
+  overflow: visible;
+  overflow-x: visible;
+  overflow-y: visible; }
+  .has-autocomplete .grid-content {
+    overflow-y: visible; }
 
 /* AUTOCOMPLETE */
 .autocomplete {
